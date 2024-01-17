@@ -1,0 +1,40 @@
+const mongoose = require('mongoose')
+
+const single = mongoose.Schema(
+    {
+       user:{
+        type: String,
+        required : [true,"name is required"]
+       },
+       pre_file:{
+        type: String,
+       },
+       post_file:{
+        type: String,
+       }
+    }
+)
+const multi = mongoose.Schema(
+    {
+       user:{
+        type: String,
+        required : [true,"name is required"]
+       },
+       pre_folder:{
+        type: String,
+       },
+       post_folder:{
+        type: String,
+       },
+       pre_file:{
+        type: String,
+       },
+       post_file:{
+        type: String,
+       }
+    }
+)
+
+
+module.exports.single = mongoose.model("Single",single)
+module.exports.single = mongoose.model("Multi",multi)

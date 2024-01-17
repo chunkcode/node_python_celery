@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Folder upload</h1>
+
+<label for="folder">Select folder</label>
+<form action="http://localhost:3000/post" method="post" enctype="multipart/form-data">
+    <input type="file" id="folder" name="pdfs" accept="application/pdf" webkitdirectory multiple/>
+    <input type="text" value="chill" name="chill">
+    <input type="submit">
+</form>
+
+
+<h2>Selected Files</h2>
+
+<ul>
+</ul>
+<!-- <script>
+    document.getElementById("folder").addEventListener("change", function(event) {
+  var output = document.querySelector("ul");
+  var files = event.target.files;
+
+  for (var i=0; i<files.length; i++) {
+    var item = document.createElement("li");
+    item.innerHTML = files[i].webkitRelativePath;
+    output.appendChild(item);
+  };
+}, false);
+</script> -->
+</body>
+</html>
